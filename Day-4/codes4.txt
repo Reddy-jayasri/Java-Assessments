@@ -1,0 +1,54 @@
+1)
+public class Matrix {
+    public static void printSmallestLargest(int[][] matrix) {
+        int smallest = matrix[0][0];
+        int largest = matrix[0][0];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < smallest) {
+                    smallest = matrix[i][j];
+                }
+                if (matrix[i][j] > largest) {
+                    largest = matrix[i][j];
+                }
+            }
+        }
+        System.out.println("Smallest: " + smallest);
+        System.out.println("Largest: " + largest);
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        printSmallestLargest(matrix);
+    }
+}
+
+
+
+2)
+public class Fibonacci {
+    public static void printFibonacci(int n) {
+        int a = 0;
+        int b = 1;
+        System.out.print(a + " " + b + " ");
+        for (int i = 2; i < n; i++) {
+            int sum = a + b;
+            System.out.print(sum + " ");
+            a = b;
+            b = sum;
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        printFibonacci(n);
+    }
+}
+
+
+
+
+
+
+
+
