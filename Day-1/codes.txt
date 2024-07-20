@@ -1,0 +1,43 @@
+1)
+public class Calculator {
+    public static int calculate(int num1, int num2, char operator) {
+        switch (operator) {
+            case '+':
+                return num1 + num2;
+            case '-':
+                return num1 - num2;
+            case '*':
+                return num1 * num2;
+            case '/':
+                return num1 / num2;
+            default:
+                return 0;
+        }
+    }
+
+    public static void main(String[] args) {
+        int result = calculate(10, 2, '+');
+        System.out.println("Result: " + result);
+    }
+}
+
+2)
+public class PrimeNumber {
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        boolean isPrime = isPrime(23);
+        System.out.println("Is Prime: " + isPrime);
+    }
+}
+
